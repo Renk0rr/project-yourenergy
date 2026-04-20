@@ -1,22 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <meta name="description" content="YourEnergy — find exercises by muscle groups, body parts and equipment" />
+    <title>YourEnergy</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <!-- HEADER -->
+    <header class="header" data-section="header">
+      <!-- TODO: розмітка хедера (відповідальний за header) -->
+    </header>
 
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <!-- HERO -->
+      <section class="hero" data-section="hero">
+        <!-- TODO: розмітка героя -->
+      </section>
+
+      <!-- FILTERS + CATEGORIES + EXERCISES -->
+      <section class="exercises-section" data-section="exercises">
+        <div class="container">
+          <div class="filters" data-section="filters">
+            <!-- TODO: кнопки Muscles / Body parts / Equipment -->
+          </div>
+
+          <div class="categories" data-section="categories">
+            <!-- TODO: сітка карток категорій -->
+          </div>
+
+          <div class="exercises" data-section="exercises-list" hidden>
+            <!-- TODO: пошук + сітка карток вправ -->
+          </div>
+        </div>
+      </section>
+
+      <!-- QUOTE -->
+      <section class="quote-section" data-section="quote">
+        <!-- TODO: цитата дня + інфо 110 хвилин -->
+      </section>
     </main>
 
-    <load src="./partials/footer.html" />
+    <!-- FOOTER -->
+    <footer class="footer" data-section="footer">
+      <!-- TODO: розмітка футера з формою підписки -->
+    </footer>
+
+    <!-- SCROLL UP -->
+    <button class="scroll-up" data-section="scroll-up" aria-label="Scroll to top">↑</button>
+
+    <!-- MODAL (рендериться сюди динамічно) -->
+    <div id="modal-root"></div>
 
     <script type="module" src="./main.js"></script>
   </body>
