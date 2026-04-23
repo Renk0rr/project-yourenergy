@@ -1,18 +1,21 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+/* ============================================================
+   YourEnergy — головний файл стилів.
+   Імпортує всі CSS-компоненти в правильному порядку.
+   ============================================================ */
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+/* Змінні та reset ПЕРШИМИ */
+@import './variables.css';
+@import './common.css';
+
+/* Компоненти — в міру готовності розкоментовуйте */
+@import './components/header.css';
+@import './components/hero.css';
+@import './components/filters.css';
+@import './components/categories.css';
+@import './components/exercises.css';
+@import './components/modal-exercise.css';
+@import './components/favorites-page.css';
+@import './components/quote.css';
+@import './components/footer.css';
+@import './components/loader.css';
+@import './components/scroll-up.css';

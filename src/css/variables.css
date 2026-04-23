@@ -1,0 +1,54 @@
+/* ============================================================
+   CSS-змінні проєкту.
+   Відповідальний: [людина з задачі №11]
+   
+   Сюди виноситься вся палітра з макету Figma, типографіка,
+   брейкпоінти і т.д. Всі компоненти мають користуватись
+   цими змінними, а не хардкодити значення.
+   ============================================================ */
+
+:root {
+  /* Кольори — TODO: взяти точні значення з макету */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f6f6f6;
+  --color-text: #1b1b1b;
+  --color-text-muted: #7a7a7a;
+  --color-accent: #3ac0eb;
+  --color-border: #e0e0e0;
+  --color-error: #e63946;
+  --color-success: #4caf50;
+
+  /* Шрифти — TODO: підключити потрібні font-family з макету */
+  --font-primary: 'DM Sans', sans-serif;
+  --font-secondary: 'DM Mono', monospace;
+
+  /* Розміри шрифтів */
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 24px;
+  --fs-2xl: 32px;
+  --fs-3xl: 44px;
+
+  /* Відступи */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Радіуси */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Транзишини */
+  --transition: 250ms ease;
+
+  /* Контейнер */
+  --container-max: 1280px;
+  --container-padding: 20px;
+}
