@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,16 +12,20 @@
     <header class="header" data-section="header"></header>
 
     <main>
-      <section class="quote-section" data-section="quote"></section>
-
       <section class="favorites-section" data-section="favorites-page">
-        <!-- TODO: список улюблених вправ -->
+        <!-- TODO: favorites exercises list -->
       </section>
     </main>
 
     <footer class="footer" data-section="footer"></footer>
 
-    <button class="scroll-up" data-section="scroll-up" aria-label="Scroll to top">↑</button>
+    <button
+      class="scroll-up"
+      data-section="scroll-up"
+      aria-label="Scroll to top"
+      hidden
+    ></button>
+
     <div id="modal-root"></div>
 
     <script type="module" src="./favorites-main.js"></script>
