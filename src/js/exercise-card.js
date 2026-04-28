@@ -5,13 +5,13 @@ export function createExerciseCardMarkup(exercise, isFavoritePage = true) {
   const topActionMarkup = isFavoritePage
     ? `<button class="exercise-card-trash-btn" type="button" aria-label="Remove from favorites">
          <svg width="16" height="16">
-           <use href="./img/sprite.svg#icon-trash"></use>
+           <use href="./images/sprite.svg#icon-trash"></use>
          </svg>
        </button>`
     : `<div class="exercise-card-rating">
          <span class="exercise-card-rating-value">${rating ? Math.round(rating * 10) / 10 : '0.0'}</span>
          <svg class="exercise-card-rating-icon" width="18" height="18">
-           <use href="./img/sprite.svg#icon-star"></use>
+           <use href="./images/sprite.svg#icon-star"></use>
          </svg>
        </div>`;
 
@@ -25,7 +25,7 @@ export function createExerciseCardMarkup(exercise, isFavoritePage = true) {
         <button class="exercise-card-start-btn" type="button">
           Start
           <svg width="16" height="16">
-            <use href="./img/sprite.svg#icon-arrow"></use>
+            <use href="./images/sprite.svg#icon-arrow-top-right"></use>
           </svg>
         </button>
       </div>
@@ -33,7 +33,7 @@ export function createExerciseCardMarkup(exercise, isFavoritePage = true) {
       <div class="exercise-card-title-wrap">
         <div class="exercise-card-icon-wrap">
           <svg class="exercise-card-icon" width="24" height="24">
-            <use href="./img/sprite.svg#icon-running-man"></use>
+            <use href="./images/sprite.svg#icon-run"></use>
           </svg>
         </div>
         <h3 class="exercise-card-title">${name}</h3>

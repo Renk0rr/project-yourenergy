@@ -1,80 +1,175 @@
-/* ============================================================
-   filters.css — стилі секції "filters"
-   Відповідальний: [поставити ім'я]
-   ============================================================ */
+.exercises-section {
+  padding: 40px 0;
+}
 
-/* TODO: стилі секції */
+.exercises-header-wrapper {
+  margin-bottom: 32px;
+}
 
-/* === MOBILE (від 320px) === */
-.filters[role='tablist'] {
+.exercises-main-title {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+  color: #242424;
+  margin-bottom: 24px;
+}
+
+.exercises-category-subtitle {
+  color: rgba(36, 36, 36, 0.6);
+  font-weight: 400;
+}
+
+.exercises-controls {
   display: flex;
+  flex-direction: column;
   gap: 16px;
+}
+
+.filter-list {
+  display: flex;
+  gap: 28px;
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap;
 }
 
-.filters__btn {
-  position: relative;
-  padding: 4px 0;
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: rgba(27, 27, 27, 0.4);
-  background: transparent;
+.filter-btn {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(36, 36, 36, 0.6);
+  background: none;
   border: none;
+  padding: 0 0 8px;
   cursor: pointer;
-  transition: color 0.25s ease;
+  position: relative;
+  transition: color var(--transition);
 }
 
-.filters__btn:hover,
-.filters__btn:focus-visible {
-  color: rgba(27, 27, 27, 0.7);
-  outline: none;
-}
-
-/* Підкреслення знизу для активного табу */
-.filters__btn::after {
+.filter-btn::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
   bottom: 0;
-  height: 2px;
-  background-color: #1b1b1b;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.25s ease;
+  left: 0;
+  width: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #242424;
+  transition: width var(--transition);
 }
 
-.filters__btn.is-active {
-  color: #1b1b1b;
+.filter-btn.active {
+  font-weight: 700;
+  color: #242424;
 }
 
-.filters__btn.is-active::after {
-  transform: scaleX(1);
+.filter-btn.active::after {
+  width: 100%;
 }
 
-/* === TABLET (від 768px) === */
-@media (min-width: 768px) {
-  .filters__btn {
-    font-size: 14px;
+.filter-btn:hover {
+  color: #242424;
+}
+
+.search-form {
+  width: 100%;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #242424;
+  border-radius: 30px;
+  padding: 12px 14px;
+  gap: 10px;
+  height: 44px;
+  max-width: 335px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  color: #242424;
+  background: transparent;
+}
+
+.search-input::placeholder {
+  color: rgba(36, 36, 36, 0.6);
+}
+
+.search-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(36, 36, 36, 0.6);
+  transition: color var(--transition);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.search-submit-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.search-submit-btn:hover {
+  color: #242424;
+}
+
+@media screen and (min-width: 768px) {
+  .exercises-controls {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .filters[role='tablist'] {
-    gap: 20px;
+  .search-form {
+    width: 264px;
   }
-}
 
-/* === DESKTOP (від 1440px) === */
-@media (min-width: 1440px) {
-  .filters__btn {
+  .exercises-main-title {
+    font-size: 44px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+  }
+
+  .filter-btn {
     font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .exercises-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
   }
 
-  .filters[role='tablist'] {
-    gap: 28px;
+  .exercises-main-title {
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 0;
+  }
+
+  .exercises-controls {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .search-form {
+    width: 320px;
   }
 }

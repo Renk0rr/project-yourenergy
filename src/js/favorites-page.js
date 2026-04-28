@@ -84,8 +84,8 @@ if (favoritesList) {
     }
 
     if (e.target.closest('.exercise-card-start-btn')) {
-      window.dispatchEvent(
-        new CustomEvent(EVENTS.EXERCISE_OPEN, { detail: { exerciseId: id } })
+      document.dispatchEvent(
+        new CustomEvent(EVENTS.EXERCISE_OPEN, { detail: { id } })
       );
       return;
     }
@@ -103,7 +103,9 @@ if (favoritesList) {
     });
   }
   
+  let resizeTimer;
   window.addEventListener('resize', () => {
-    renderFavorites();
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(renderFavorites, 200);
   });
 }

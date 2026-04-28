@@ -4,8 +4,6 @@
    Mobile-first: base → tablet (768px) → desktop (1280px)
    ============================================================ */
 
-/* ── Section ─────────────────────────────────────────────── */
-
 .favorites-section {
   padding-top: 80px;
   padding-bottom: 40px;
@@ -15,13 +13,10 @@
   min-height: 100vh;
 }
 
-/* Override container for this section */
 .favorites-section .container {
   max-width: 100%;
   padding-inline: 20px;
 }
-
-/* ── Title ────────────────────────────────────────────────── */
 
 .favorites-title {
   font-family: 'DM Sans', sans-serif;
@@ -30,8 +25,6 @@
   line-height: 1.17;
   margin-bottom: 20px;
 }
-
-/* ── Layout wrapper ──────────────────────────────────────── */
 
 .favorites-wrapper {
   display: flex;
@@ -51,8 +44,6 @@
   flex-direction: column;
 }
 
-
-
 .favorites-empty-text {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
@@ -63,7 +54,6 @@
   padding-top: 20px;
 }
 
-
 .favorite-item {
   background-color: #ffffff;
   border-radius: 15px;
@@ -73,8 +63,6 @@
   gap: 8px;
   height: 141px;
 }
-
-/* ── Card header (badge + start) ─────────────────────────── */
 
 .favorite-item-header {
   display: flex;
@@ -116,16 +104,12 @@
   color: #242424;
 }
 
-
-
 .favorites-list {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 20px;
   width: 100%;
 }
-
-
 
 @media screen and (min-width: 768px) {
   .favorites-section {
@@ -158,8 +142,6 @@
     gap: 32px 16px;
   }
 }
-
-
 
 @media screen and (min-width: 1280px) {
   .favorites-section {
