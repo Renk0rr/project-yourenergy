@@ -64,6 +64,23 @@
 }
 
 
+.favorite-item {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 141px;
+}
+
+/* ── Card header (badge + start) ─────────────────────────── */
+
+.favorite-item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .favorites-pagination {
   display: flex;
@@ -130,6 +147,10 @@
     max-width: 554px;
     padding-top: 80px;
     font-size: 18px;
+  }
+
+  .favorites-list-wrapper {
+    max-height: 487px;
   }
 
   .favorites-list {
