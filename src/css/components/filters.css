@@ -37,9 +37,10 @@
 
 .filter-btn {
   font-family: var(--font-primary);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
   color: rgba(36, 36, 36, 0.6);
   background: none;
   border: none;
@@ -62,7 +63,7 @@
 }
 
 .filter-btn.active {
-  font-weight: 700;
+  font-weight: 400;
   color: #242424;
 }
 
@@ -79,14 +80,15 @@
 }
 
 .search-input-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   border: 1px solid #242424;
   border-radius: 30px;
-  padding: 12px 14px;
+  padding: 15px 14px;
   gap: 10px;
-  height: 44px;
-  max-width: 335px;
+  width: 273px;
+  height: 48px;
 }
 
 .search-input {
@@ -94,31 +96,42 @@
   border: none;
   outline: none;
   font-family: var(--font-primary);
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
   color: #242424;
   background: transparent;
 }
 
 .search-input::placeholder {
-  color: rgba(36, 36, 36, 0.6);
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #242424;
 }
 
 .search-submit-btn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
-  color: rgba(36, 36, 36, 0.6);
+  color: #242424;
   transition: color var(--transition);
   padding: 0;
-  flex-shrink: 0;
 }
 
 .search-submit-btn svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 
 .search-submit-btn:hover {
@@ -139,17 +152,18 @@
 
   .exercises-main-title {
     font-size: 44px;
+    font-weight: 400;
     line-height: 48px;
     letter-spacing: -0.02em;
   }
 
-  .filter-btn {
-    font-size: 16px;
-    line-height: 24px;
-  }
 }
 
 @media screen and (min-width: 1440px) {
+  .exercises-section > .container {
+    padding-left: 508px;
+  }
+
   .exercises-header-wrapper {
     display: flex;
     align-items: center;
@@ -159,6 +173,7 @@
 
   .exercises-main-title {
     font-size: 32px;
+    font-weight: 400;
     line-height: 48px;
     margin-bottom: 0;
   }
