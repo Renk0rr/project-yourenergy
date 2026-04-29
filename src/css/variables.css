@@ -7,16 +7,50 @@
    цими змінними, а не хардкодити значення.
    ============================================================ */
 
+
+
 :root {
-  /* Кольори — TODO: взяти точні значення з макету */
-  --color-bg: #ffffff;
-  --color-bg-secondary: #f6f6f6;
-  --color-text: #1b1b1b;
-  --color-text-muted: #7a7a7a;
-  --color-accent: #3ac0eb;
-  --color-border: #e0e0e0;
-  --color-error: #e63946;
-  --color-success: #4caf50;
+
+  /* Основний фон сайту */
+  --color-bg-main: #f4f4f4;
+
+  /* Кольори карток */
+  --color-bg-white: #ffffff;
+  --color-bg-black: #242424;
+
+  /* Кольори тексту для світлого фону */
+  --color-text-dark: #242424;
+  --color-text-dark-60: rgba(36, 36, 36, 0.6); 
+  --color-text-dark-40: rgba(36, 36, 36, 0.4); 
+
+  /* Кольори тексту для темного фону */
+  --color-text-light: #f4f4f4; 
+  --color-text-light-60: rgba(244, 244, 244, 0.6); 
+  --color-text-light-40: rgba(244, 244, 244, 0.4); 
+
+  --color-border-dark-alpha: rgba(36, 36, 36, 0.1); /* Темна прозора рамка на іконках (10% для світлого фону) */
+  --color-border-solid: #242424;
+  --color-border-light-alpha: rgba(244, 244, 244, 0.1); /* Світла прозора рамка на іконках (10% для темнохо фону/футера) */
+
+  /* Колір для другорядних посилань у футері (Privacy Policy тощо) */
+  --color-text-footer-muted: #c6cdd1;
+
+  /* Жовтий для зірок рейтингу */
+  --color-rating: #eea10c;       
+  
+  /* Колір неактивних елементів пагінації */
+  --color-pagination-inactive: #d4d4d4;
+  --color-rating-inactive: rgba(244, 244, 244, 0.2);
+
+
+
+
+
+
+
+
+
+
 
   /* Шрифти — TODO: підключити потрібні font-family з макету */
   --font-primary: 'DM Sans', sans-serif;
@@ -51,4 +85,5 @@
   /* Контейнер */
   --container-max: 1280px;
   --container-padding: 20px;
+
 }
