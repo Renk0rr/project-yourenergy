@@ -164,6 +164,11 @@
     padding-left: 508px;
   }
 
+  .pagination {
+    margin-left: -508px;
+    width: calc(100% + 508px);
+  }
+
   .exercises-header-wrapper {
     display: flex;
     align-items: center;

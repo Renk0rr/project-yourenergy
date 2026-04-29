@@ -1,7 +1,7 @@
 import { getExercises } from './api.js';
 import { EVENTS, PAGINATION } from './constants.js';
 import { showLoader, hideLoader } from './loader.js';
-import { createExerciseCardMarkup } from './exercise-card.js';
+
 
 const exercisesList = document.getElementById('exercises-container');
 const exercisesWrapper = document.querySelector('.exercises-wrapper');
