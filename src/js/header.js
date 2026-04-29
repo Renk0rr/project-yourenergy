@@ -37,18 +37,15 @@
   }
 
   function setActiveMenu() {
-    const currentPath = window.location.pathname;
+    const currentFile = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 
     navLinks.forEach(link => link.classList.remove('is-active'));
 
     navLinks.forEach(link => {
       const linkHref = link.getAttribute('href');
-      if (linkHref) {
-        const linkPath = linkHref.replace('./', '/');
-        if (linkPath === currentPath) {
-          link.classList.add('is-active');
-        }
+      if (linkHref && linkHref.split('/').pop() === currentFile) {
+        link.classList.add('is-active');
       }
     });
   }

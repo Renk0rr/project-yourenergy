@@ -1,6 +1,185 @@
-/* ============================================================
-   quote.css — стилі секції "quote"
-   Відповідальний: [поставити ім'я]
-   ============================================================ */
+body {
+  font-family: 'DM Sans', sans-serif;
+}
 
-/* TODO: стилі секції */
+.quote-wrapper {
+  margin-top: 32px;
+}
+
+.quote-container {
+  background-color: #242424;
+  color: #f4f4f4;
+  padding: 20px;
+  border-radius: 20px;
+  width: 335px;
+  height: auto;
+}
+
+.quote-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  height: auto;
+}
+
+.quote-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quote-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #242424;
+  display: block;
+  padding-left: 50px;
+}
+
+.quote-author {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #f4f4f4;
+  display: block;
+  padding-left: 50px;
+  margin-top: 16px;
+}
+
+.quote-icon-box {
+  background-color: rgba(244, 244, 244, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quote-icon-commas {
+  align-self: flex-start;
+}
+
+.quote-icon-run,
+.quote-icon-commas,
+.info-icon-dumbbell {
+  fill: #f4f4f4;
+  display: block;
+}
+
+.quote-title {
+  font-size: 20px;
+  font-weight: 500;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  display: block;
+  line-height: 1;
+  align-self: flex-start;
+}
+
+.quote-text {
+  margin-bottom: 0px;
+  font-size: 14px;
+  line-height: 1.28;
+  color: rgba(244, 244, 244, 0.6);
+}
+
+.quote-author {
+  font-size: 14px;
+  color: #f4f4f4;
+  margin: 0;
+}
+
+.quote-image-container {
+  width: 335px;
+  height: 242px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.quote-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote-bottom-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.info-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 20px;
+  color: #242424;
+  width: 335px;
+  height: 201px;
+}
+
+.info-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.info-icon-box {
+  background-color: #242424;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 32px;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.info-minutes {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 2px;
+  color: #242424;
+}
+
+.info-subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(36, 36, 36, 0.6);
+  margin: 0;
+}
+
+.info-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #242424;
+  display: block;
+  margin-top: 16px;
+  padding-left: 44px;
+}
+
+.favorites-quote-wrap .info-description {
+  display: none;
+}
+
+.quote-image-container {
+  background-image: url('../../women-sportswear-taking-break-from-workout 1_mob.png');
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  .quote-image-container {
+    background-image: url('../../women-sportswear-taking-break-from-workout 1_mob.png@2x.png');
+  }
+}
