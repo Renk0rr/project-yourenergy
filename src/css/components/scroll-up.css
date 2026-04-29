@@ -22,7 +22,7 @@
   border-radius: 50%;
   border: none;
 
-  background-color: #242424;
+  background-color: var(--color-text-dark);
   cursor: pointer;
 
   transition: transform 250ms ease, opacity 250ms ease;
@@ -39,11 +39,10 @@
   width: 15px;
   height: 15px;
 
-  fill:#f4f4f4;
-;
-  stroke: #f4f4f4;
+  fill: var(--color-text-light);
+  stroke: var(--color-text-light);
 
-  stroke-width: 2; /*  замість 0.3px (реалістично для браузера) */
+  stroke-width: 0.8; /*  замість 0.3px (реалістично для браузера) */
   stroke-linecap: round;
   stroke-linejoin: round;
 
