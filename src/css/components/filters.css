@@ -14,6 +14,8 @@
   letter-spacing: -0.02em;
   color: #242424;
   margin-bottom: 24px;
+  text-align: left;
+  margin-right: auto;
 }
 
 .exercises-category-subtitle {
@@ -160,13 +162,33 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .exercises-section > .container {
-    padding-left: 508px;
+  main {
+    display: grid;
+    grid-template-columns: 508px 1fr;
+    grid-template-areas:
+      "hero hero"
+      "quote exercises";
+    column-gap: 32px;
+    align-items: start;
   }
 
-  .pagination {
-    margin-left: -508px;
-    width: calc(100% + 508px);
+  .hero {
+    grid-area: hero;
+  }
+
+  .exercises-section {
+    grid-area: exercises;
+  }
+
+  .exercises-section > .container {
+    padding-inline-start: 0;
+    padding-inline-end: 32px;
+  }
+
+  .quote-section {
+    grid-area: quote;
+    padding-top: 120px;
+    padding-left: 32px;
   }
 
   .exercises-header-wrapper {
