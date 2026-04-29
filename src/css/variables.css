@@ -17,6 +17,8 @@
   --color-border: #e0e0e0;
   --color-error: #e63946;
   --color-success: #4caf50;
+  --color-black: #242424;
+  --color-white: #f4f4f4;
 
   /* Шрифти — TODO: підключити потрібні font-family з макету */
   --font-primary: 'DM Sans', sans-serif;
