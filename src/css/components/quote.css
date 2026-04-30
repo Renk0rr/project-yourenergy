@@ -397,9 +397,7 @@
     line-height: 1.5;
     padding-left: 47px;
   }
-}
 
-@media screen and (min-width: 1280px) {
   .favorites-wrapper {
     display: flex;
     align-items: flex-start;
