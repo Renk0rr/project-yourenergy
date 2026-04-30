@@ -38,7 +38,6 @@
 .modal-window {
    position: relative;
    width: 708px;
-   min-height: 486px;
    /* min-height краще, щоб контент не виліз, якщо тексту багато */
    background: #242424;
    border-radius: 38px;
@@ -78,9 +77,9 @@
 
 
 .star {
-   width: 18px;
-   height: 18px;
-   flex: 0 0 18px;
+   width: 14px;
+   height: 14px;
+   flex: 0 0 14px;
    fill: #444;
 }
 
@@ -96,7 +95,7 @@
 .modal-layout {
    display: flex;
    gap: 32px;
-   /* відступ між картинкою і текстом */
+   align-items: stretch;
 }
 
 /* ========================================= */
@@ -120,6 +119,9 @@
    width: 342px;
    display: flex;
    flex-direction: column;
+   flex: 1;
+   min-height: 100%;
+   
 }
 
 /* ЗАГОЛОВОК */
@@ -146,6 +148,11 @@
    align-items: center;
    gap: 4px;
    margin-bottom: 0px;
+}
+.modal-rating span:first-child {
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 1;
 }
 
 
@@ -183,13 +190,18 @@
    gap: 4px;
 }
 
-.modal-stats span:first-child,
-.modal-calories span:first-child {
-   /* Заголовок в даних */
+.modal-stats span:first-child {
    font-weight: 400;
    font-size: 12px;
    line-height: 1.5;
    color: rgba(244, 244, 244, 0.4);
+}
+
+.modal-stats span:last-child {
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 1.5;
+   color: #f4f4f4;
 }
 
 .modal-stats span:last-child {
@@ -205,16 +217,16 @@
 .modal-calories {
    display: flex;
    flex-direction: column;
-   gap: 4px;
-   border-bottom: none;
-   padding-bottom: 0;
-   margin-bottom: 0;
-
-   /* Та сама лінія з ТЗ */
-   font-weight: 400;
+   
    font-size: 14px;
-   line-height: 1.5;
+   font-weight: 500;
    color: #f4f4f4;
+}
+
+.modal-calories span:first-child {
+   font-size: 12px;
+   font-weight: 400;
+   color: rgba(244, 244, 244, 0.4);
 }
 
 /* ОПИС (ТЕКСТ) */
@@ -223,7 +235,7 @@
    font-size: 14px;
    line-height: 1.28571;
    color: rgba(244, 244, 244, 0.6);
-   margin-bottom: auto;
+  
    /* Виштовхує кнопки вниз */
 }
 
@@ -235,9 +247,9 @@
    gap: 8px;
    margin-top: 64px;
    align-items: center;
-     
    flex-direction: row-reverse;
 }
+     
 .modal-exercise-btn {
    display: inline-flex;
    align-items: center;
@@ -304,28 +316,7 @@
    border: 1px solid #f4f4f4;
 }
 
-.modal-rating svg {
-   width: 18px !important;
-   height: 18px !important;
-}
 
-.modal-rating use {
-   width: 18px;
-   height: 18px;
-}
-.modal-rating .star {
-   width: 18px !important;
-   height: 18px !important;
-}
-
-.modal-rating .star use {
-   width: 100% !important;
-   height: 100% !important;
-}
-
-.modal-rating .star {
-   display: inline-block;
-}
 
 /* ========================================= */
 /* АДАПТИВНІСТЬ ДЛЯ МОБІЛОК (до 768px) */
