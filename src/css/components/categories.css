@@ -131,20 +131,38 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .categories-wrapper {
-    padding-right: 32px;
-    padding-left: 508px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .categories-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, calc((100% - 64px) / 3));
+    column-gap: 32px;
+    row-gap: 15px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .category-item {
-    width: 290px;
+    width: 100%;
+    max-width: 100%;
     height: 242px;
-    max-width: 290px;
+    margin: 0;
+  }
+
+  .category-card-btn {
+    width: 100%;
+    height: 100%;
+  }
+
+  .category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

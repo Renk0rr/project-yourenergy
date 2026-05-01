@@ -1,108 +1,101 @@
 
 .quote-wrapper {
-  margin-top: 32px;
-}
-
-.quote-container {
-  background-color: #242424;
-  color: #f4f4f4;
-  padding: 20px;
-  border-radius: 20px;
-  width: 335px;
-  height: 209px;
+  width: 100%;
+  margin: 0;
 }
 
 .quote-top-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+.quote-container {
+  width: 100%;
+  min-height: 209px;
+  padding: 20px;
+  border-radius: 20px;
+
+  background-color: var(--color-bg-black);
+  color: var(--color-text-light);
 }
 
 .quote-header {
   display: flex;
-  align-items: center;
-  flex-direction: row;
+  align-items: flex-start;
   gap: 16px;
-  height: auto;
-}
-
-.quote-text-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.quote-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.2;
-  color: #242424;
-  display: block;
-  padding-left: 50px;
-}
-
-.quote-author {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.2;
-  color: #f4f4f4;
-  display: block;
-  padding-left: 50px;
-  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .quote-icon-box {
-  background-color: rgba(244, 244, 244, 0.2);
-  border-radius: 50%;
+  width: 34px;
+  height: 32px;
+  flex-shrink: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-}
 
-.quote-icon-commas {
-  align-self: flex-start;
+  border-radius: 50%;
+  background-color: rgba(244, 244, 244, 0.2);
 }
 
 .quote-icon-run,
 .quote-icon-commas,
 .info-icon-dumbbell {
-  fill: #f4f4f4;
   display: block;
+  fill: var(--color-text-light);
 }
 
 .quote-title {
-  font-size: 20px;
-  font-weight: 500;
-  gap: 18px;
-  padding: 0;
-  margin: 0;
   flex-grow: 1;
-  display: block;
-  line-height: 1;
-  align-self: flex-start;
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+
+  color: var(--color-text-light);
+}
+
+.quote-icon-commas {
+  flex-shrink: 0;
+}
+
+.quote-text-wrapper {
+  padding-left: 50px;
 }
 
 .quote-text {
-  margin-bottom: 0px;
+  margin: 0;
+
+  font-family: var(--main-font);
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.28;
-  color: rgba(244, 244, 244, 0.6);
+
+  color: var(--color-text-light-60);
 }
 
 .quote-author {
+  margin-top: 16px;
+
+  font-family: var(--main-font);
+  font-weight: 400;
   font-size: 14px;
-  color: #f4f4f4;
-  margin: 0;
+  line-height: 1.28;
+
+  color: var(--color-text-light);
 }
 
 .quote-image-container {
-  width: 335px;
+  width: 100%;
   height: 242px;
-  border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 0;
+  border-radius: 20px;
 }
 
 .quote-image {
@@ -115,168 +108,149 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 16px;
 }
 
 .info-container {
-  background-color: #fff;
+  width: 100%;
+  min-height: 201px;
   padding: 20px;
   border-radius: 20px;
-  color: #242424;
-  width: 335px;
-  height: 201px;
+
+  background-color: var(--color-bg-white);
+  color: var(--color-text-dark);
 }
 
 .info-header {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   margin-bottom: 16px;
 }
 
 .info-icon-box {
-  background-color: #242424;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 34px;
   height: 32px;
   flex-shrink: 0;
-  align-self: flex-start;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: var(--color-bg-black);
 }
 
 .info-minutes {
+  margin: 0 0 2px;
+
+  font-family: var(--main-font);
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
-  margin-bottom: 2px;
-  color: #242424;
+
+  color: var(--color-text-dark);
 }
 
 .info-subtitle {
+  margin: 0;
+
+  font-family: var(--main-font);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.2;
-  color: rgba(36, 36, 36, 0.6);
-  margin: 0;
+
+  color: var(--color-text-dark-60);
 }
 
 .info-description {
+  margin: 0;
+  padding-left: 46px;
+
+  font-family: var(--main-font);
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.2;
-  color: #242424;
-  display: block;
-  margin-top: 16px;
-  padding-left: 44px;
+  line-height: 1.28;
+
+  color: var(--color-text-dark);
 }
 
+/* Favorites page overrides */
 .favorites-quote-wrap .info-description {
   display: none;
 }
 
 .favorites-quote-wrap .info-container {
-  height: 119px;
+  min-height: 119px;
 }
 
 .favorites-quote-wrap .info-header {
   flex-direction: column;
-  align-items: flex-start;
   gap: 8px;
 }
 
-.favorites-quote-wrap .info-title-wrapper {
-  margin: 0;
-}
-
 .favorites-quote-wrap .info-icon-box {
-  align-self: flex-start;
-  background-color: transparent;
   width: auto;
   height: auto;
-  display: block;
   margin-bottom: 8px;
+
+  display: block;
+
+  background-color: transparent;
 }
 
 .favorites-quote-wrap .info-icon-dumbbell {
-  fill: #242424;
+  fill: var(--color-text-dark);
 }
 
-.quote-image-container {
-  background-image: url('../../women-sportswear-taking-break-from-workout 1_mob.png');
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
-  .quote-image-container {
-    background-image: url('../../women-sportswear-taking-break-from-workout 1_mob.png@2x.png');
-  }
-}
-
-/* Tablet home */
-@media screen and (min-width: 768px) {
-  .quote-bottom-section {
-    margin-top: 16px;
-  }
-
-  .quote-wrapper {
-    margin-top: 40px;
-    margin-left: 16px;
-  }
-
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .quote-top-section {
     flex-direction: row;
-    align-items: stretch;
     gap: 16px;
-    width: 704px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
 
-  .quote-container {
-    height: auto;
-
-    flex: 1;
-    width: auto;
-    box-sizing: border-box;
-    margin: 0;
+.quote-container {
+    width: 400px;
+    height: 249px;
+    min-height: 0;
     padding: 40px;
   }
 
   .quote-image-container {
     width: 288px;
-    height: auto;
+    height: 249px;
     flex-shrink: 0;
-    margin: 0;
+  }
+
+  .quote-bottom-section {
+    width: 400px;
   }
 
   .info-container {
-    width: 100%;
-    box-sizing: border-box;
     width: 400px;
+    height: 249px;
+    min-height: 0;
     padding: 40px;
-    height: auto;
+  }
+
+  .quote-title,
+  .info-minutes {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  .quote-text,
+  .quote-author,
+  .info-description {
+    line-height: 1.5;
   }
 
   .info-description {
-    display: block;
-    padding-left: 0;
-    margin-top: 16px;
     padding-left: 47px;
   }
-}
 
-.quote-title {
-  font-size: 24px;
-}
-
-.info-minutes {
-  font-size: 24px;
-}
-
-/* Tablet — Favorites page */
-@media screen and (min-width: 768px) {
+  /* Favorites tablet */
   .favorites-wrapper .quote-top-section {
     flex-direction: column;
     width: 704px;
@@ -286,53 +260,38 @@
 
   .favorites-wrapper .quote-container {
     width: 100%;
-    box-sizing: border-box;
+    min-height: auto;
   }
 
   .favorites-wrapper .quote-image-container {
-    display: none; /* у Favorites tablet фото йде в bottom-section */
+    display: none;
   }
 
   .favorites-wrapper .quote-bottom-section {
     flex-direction: row;
     align-items: stretch;
     gap: 16px;
-    margin-top: 0;
     width: 704px;
   }
 
-  .favorites-wrapper .quote-author {
-    font-size: 16px;
-  }
-
-  .favorites-wrapper .quote-text {
-    padding-top: 6px;
-  }
-
   .favorites-wrapper .info-container {
-    flex: 1;
     width: 344px;
-    height: 141px;
+    min-height: 141px;
     padding: 40px;
-    box-sizing: border-box;
   }
 
   .favorites-wrapper .info-description {
     display: none;
   }
 
-  .favorites-wrapper .info-subtitle {
-    padding-top: 6px;
-  }
-
   .favorites-wrapper .info-icon-box {
-    background-color: transparent;
     width: auto;
     height: auto;
+    background-color: transparent;
   }
 
   .favorites-wrapper .info-icon-dumbbell {
-    fill: #242424;
+    fill: var(--color-text-dark);
   }
 
   .favorites-wrapper .quote-bottom-section::after {
@@ -347,24 +306,33 @@
   }
 }
 
-/* Desktop home */
+/* Desktop */
 @media screen and (min-width: 1280px) {
   .quote-wrapper {
-    margin-top: 0;
-    margin-left: 0;
     width: 444px;
   }
 
   .quote-top-section {
     flex-direction: column;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+  .quote-container {
     width: 100%;
-    gap: 20px;
-    margin-bottom: 20px;
+    min-height: 242px;
+    padding: 40px;
+    gap: 32px;
   }
 
-  .quote-container {
-    width: 444px;
-    padding: 40px;
+  .quote-image-container {
+    width: 100%;
+    height: 242px;
+  }
+
+  .info-container {
+    width: 100%;
+    min-height: 315px;
+   
   }
 
   .quote-title {
@@ -377,17 +345,6 @@
     line-height: 1.5;
   }
 
-  .quote-image-container {
-    width: 444px;
-    height: 242px;
-  }
-
-  .info-container {
-    width: 444px;
-    height: 315px;
-    padding: 40px;
-  }
-
   .info-minutes {
     font-size: 24px;
   }
@@ -397,9 +354,7 @@
     line-height: 1.5;
     padding-left: 47px;
   }
-}
 
-@media screen and (min-width: 1280px) {
   .favorites-wrapper {
     display: flex;
     align-items: flex-start;
@@ -415,14 +370,12 @@
     flex-direction: column;
     width: 100%;
     margin-bottom: 20px;
-    height: auto;
   }
 
   .favorites-wrapper .quote-container {
     width: 494px;
-    height: 230px;
+    min-height: 242px;
     padding: 40px;
-    box-sizing: border-box;
   }
 
   .favorites-wrapper .quote-image-container {
@@ -430,24 +383,16 @@
   }
 
   .favorites-wrapper .quote-bottom-section {
-    display: flex;
     flex-direction: row;
     align-items: stretch;
     gap: 16px;
     width: 100%;
-    margin-top: 0;
   }
 
   .favorites-wrapper .info-container {
-    flex: 1;
     width: 239px;
-    height: 141px;
+    min-height: 141px;
     padding: 16px;
-    box-sizing: border-box;
-  }
-
-  .favorites-wrapper .info-subtitle {
-    padding-top: 6px;
   }
 
   .favorites-wrapper .quote-bottom-section::after {

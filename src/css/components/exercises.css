@@ -13,7 +13,6 @@
   flex-direction: column;
 }
 
-/* Header: title + filters/search */
 .exercises-header-wrapper {
   display: flex;
   flex-direction: column;
@@ -39,12 +38,9 @@
   gap: 20px;
 }
 
-.exercises-filters {
-  display: flex;
-}
-
 .filter-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
 }
@@ -79,6 +75,7 @@
 }
 
 /* Search */
+
 .search-form {
   width: 100%;
 }
@@ -104,35 +101,39 @@
   top: 50%;
   right: 14px;
   transform: translateY(-50%);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-dark);
-  background-color: transparent;
-  border: none;
 }
 
-/* Main layout: quote left + cards right */
+/* Layout */
+
 .home-exercises-content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 40px;
 }
 
-.home-exercises-sidebar,
 .home-exercises-main {
+  order: 1;
   width: 100%;
+  min-width: 0;
 }
 
-.home-exercises-sidebar .quote-wrapper {
-  margin: 0;
+.home-exercises-sidebar {
+  order: 2;
+  width: 100%;
+  min-width: 0;
 }
 
-/* Categories / exercises grid */
+/* Lists */
+
 .categories-wrapper,
 .exercises-wrapper {
   width: 100%;
   margin: 0;
+  padding: 0 !important;
 }
 
 .categories-list,
@@ -140,23 +141,38 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+
   width: 100%;
+  max-width: 100%;
   padding: 0;
   margin: 0;
+
   list-style: none;
 }
 
 .category-item,
+.category-card,
+.category-card-btn,
 .exercise-card {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.category-img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
 }
 
 /* Pagination */
+
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
+
   margin-top: 20px;
 }
 
@@ -164,13 +180,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   min-width: 32px;
   height: 32px;
   padding: 0 8px;
+
   border-radius: 50%;
   border: 1px solid transparent;
+
   background-color: transparent;
   color: var(--color-text-dark-40);
+
   font-size: 20px;
   line-height: 1;
 }
@@ -188,7 +208,12 @@
   padding: 48px 0;
 }
 
-/* Tablet */
+/* ============================================================
+   Tablet
+   3 cards in row, adaptive width
+   card width = (100% - 2 gaps) / 3
+   ============================================================ */
+
 @media screen and (min-width: 768px) {
   .home-exercises-section {
     padding-top: 64px;
@@ -216,8 +241,14 @@
 
   .categories-list,
   .exercises-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px 16px;
+    grid-template-columns: repeat(3, calc((100% - 30px) / 3));
+    column-gap: 15px;
+    row-gap: 32px;
+  }
+
+  .category-img {
+    width: 100%;
+    height: 225px;
   }
 
   .pagination {
@@ -225,7 +256,14 @@
   }
 }
 
-/* Desktop */
+/* ============================================================
+   Desktop
+   Left column: 444px
+   Gap between quote and cards: 32px
+   Right column: remaining width
+   Cards width = (right column - 2 gaps) / 3
+   ============================================================ */
+
 @media screen and (min-width: 1280px) {
   .home-exercises-section {
     padding-top: 64px;
@@ -234,30 +272,53 @@
 
   .home-exercises-content {
     display: grid;
-    grid-template-columns: 444px minmax(0, 1fr);
-    gap: 32px;
+    grid-template-columns: 444px calc(100% - 444px - 32px);
+    column-gap: 32px;
     align-items: start;
   }
 
   .home-exercises-sidebar {
+    order: 1;
     width: 444px;
-  }
-
-  .home-exercises-main {
     min-width: 0;
   }
 
+  .home-exercises-main {
+    order: 2;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .categories-wrapper,
+  .exercises-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+
   .categories-list,
   .exercises-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 32px 16px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .home-exercises-main .categories-wrapper,
-  .home-exercises-main .exercises-wrapper {
-    padding: 0 !important;
-    margin: 0 !important;
+    grid-template-columns: repeat(3, calc((100% - 30px) / 3));
+    column-gap: 15px;
+    row-gap: 32px;
     width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .category-item,
+  .category-card,
+  .category-card-btn,
+  .exercise-card {
+    width: 100%;
+    height: 242px; 
+    min-width: 0;
+  }
+
+  .category-img {
+    width: 100%;
+    height: 242px;
+    object-fit: cover;
   }
 }
