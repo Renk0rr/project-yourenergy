@@ -98,6 +98,7 @@ function renderExerciseCards(exercises) {
                 </div>
             </li>
         `)
+        .join('')
 
     exercisesList.querySelectorAll('.exercise-card-start-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -115,7 +116,18 @@ function renderPagination(totalPages) {
         return;
     }
 
-    paginationContainer.innerHTML = Array.from({ length: totalPages }, (_, i) => i + 1)
+    const MAX_VISIBLE = 3;
+    let startPage = Math.max(1, currentPage - Math.floor(MAX_VISIBLE / 2));
+    let endPage = startPage + MAX_VISIBLE - 1;
+    if (endPage > totalPages) {
+        endPage = totalPages;
+        startPage = Math.max(1, endPage - MAX_VISIBLE + 1);
+    }
+
+    paginationContainer.innerHTML = Array.from(
+        { length: endPage - startPage + 1 },
+        (_, i) => startPage + i
+    )
         .map(page => `
             <button
                 class="pagination-btn ${page === currentPage ? 'active' : ''}"

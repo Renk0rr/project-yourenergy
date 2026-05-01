@@ -10,12 +10,20 @@
   gap: 32px;
 }
 
+/* Quote sidebar appears BELOW exercises on mobile/tablet */
 .exercises-left-column {
+  order: 2;
   width: 100%;
 }
 
 .exercises-right-column {
-  flex-grow: 1;
+  order: 1;
+  width: 100%;
+}
+
+/* Remove quote's built-in margin-top inside sidebar */
+.exercises-left-column .quote-wrapper {
+  margin-top: 0;
 }
 
 .exercises-wrapper {
@@ -24,11 +32,17 @@
 
 .exercises-list {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .exercises-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .exercise-card {
@@ -36,9 +50,7 @@
   border-radius: 15px;
   padding: 16px;
   width: 100%;
-  max-width: 335px;
   min-height: 141px;
-  margin: 0 auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
@@ -156,30 +168,6 @@
   color: #242424;
 }
 
-@media screen and (min-width: 768px) {
-  .exercises-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px 16px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .exercises-main-container {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 32px;
-  }
-
-  .exercises-left-column {
-    width: 340px;
-    flex-shrink: 0;
-  }
-
-  .exercises-wrapper {
-    padding-left: 0; /* Прибираємо старий відступ, тепер він регулюється через gap */
-  }
-}
-
 .no-results {
   text-align: center;
   color: rgba(36, 36, 36, 0.6);
@@ -190,17 +178,15 @@
 
 @media screen and (min-width: 768px) {
   .exercises-list {
-    grid-template-columns: repeat(2, 1fr);
     gap: 32px 16px;
   }
 
   .exercise-card {
-    max-width: 100%;
     padding: 32px 15px;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .exercises-main-container {
     flex-direction: row;
     align-items: flex-start;
@@ -208,19 +194,32 @@
   }
 
   .exercises-left-column {
-    width: 340px;
+    order: 0;
+    width: 444px;
     flex-shrink: 0;
   }
 
-  .exercises-wrapper {
-    padding-left: 0;
+  .exercises-right-column {
+    order: 0;
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Override quote widths to fit the sidebar column */
+  .exercises-left-column .quote-top-section {
+    flex-direction: column !important;
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .exercises-left-column .quote-container,
+  .exercises-left-column .quote-image-container,
+  .exercises-left-column .info-container {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .exercises-left-column .quote-image-container {
+    height: 242px;
   }
 }
-
-@media screen and (min-width: 1440px) {
-  .exercises-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
