@@ -116,7 +116,6 @@
 .home-exercises-content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
 
 .home-exercises-sidebar,
@@ -126,6 +125,8 @@
 
 .home-exercises-sidebar .quote-wrapper {
   margin: 0;
+
+  list-style: none;
 }
 
 /* Categories / exercises grid */
@@ -252,12 +253,10 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px 16px;
   }
-}
-@media screen and (min-width: 1280px) {
   .home-exercises-main .categories-wrapper,
   .home-exercises-main .exercises-wrapper {
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0 ;
+    margin: 0 ;
     width: 100%;
   }
 }
