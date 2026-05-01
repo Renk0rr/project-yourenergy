@@ -203,51 +203,51 @@
 }
 
 /* Tablet */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .quote-top-section {
     flex-direction: row;
     gap: 16px;
     margin-bottom: 16px;
   }
 
-  .quote-container {
-    flex: 1;
-    min-height: 242px;
+.quote-container {
+    width: 400px;
+    height: 249px;
+    min-height: 0;
     padding: 40px;
   }
 
   .quote-image-container {
-    width: 225px;
-    height: 242px;
+    width: 288px;
+    height: 249px;
     flex-shrink: 0;
   }
 
-  .quote-title {
+  .quote-bottom-section {
+    width: 400px;
+  }
+
+  .info-container {
+    width: 400px;
+    height: 249px;
+    min-height: 0;
+    padding: 40px;
+  }
+
+  .quote-title,
+  .info-minutes {
     font-size: 24px;
     line-height: 1.17;
   }
 
-  .quote-text {
+  .quote-text,
+  .quote-author,
+  .info-description {
     line-height: 1.5;
-  }
-
-  .quote-author {
-    line-height: 1.5;
-  }
-
-  .info-container {
-    width: 335px;
-    min-height: 201px;
-    padding: 40px;
-  }
-
-  .info-minutes {
-    font-size: 24px;
   }
 
   .info-description {
-    padding-left: 46px;
-    line-height: 1.5;
+    padding-left: 47px;
   }
 
   /* Favorites tablet */
