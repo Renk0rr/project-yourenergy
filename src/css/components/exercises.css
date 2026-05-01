@@ -156,6 +156,30 @@
   color: #242424;
 }
 
+@media screen and (min-width: 768px) {
+  .exercises-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .exercises-main-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .exercises-left-column {
+    width: 340px;
+    flex-shrink: 0;
+  }
+
+  .exercises-wrapper {
+    padding-left: 0; /* Прибираємо старий відступ, тепер він регулюється через gap */
+  }
+}
+
 .no-results {
   text-align: center;
   color: rgba(36, 36, 36, 0.6);
@@ -199,3 +223,4 @@
     gap: 20px;
   }
 }
+

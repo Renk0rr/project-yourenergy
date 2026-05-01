@@ -1,6 +1,7 @@
 import { getExercises } from './api.js';
 import { EVENTS, PAGINATION } from './constants.js';
 import { showLoader, hideLoader } from './loader.js';
+import { createExerciseCardMarkup } from './exercise-card.js';
 
 
 const exercisesList = document.getElementById('exercises-container');
@@ -97,12 +98,12 @@ function renderExerciseCards(exercises) {
                 </div>
             </li>
         `)
-        .join('');
 
-    exercisesList.querySelectorAll('.ex-start-btn').forEach(btn => {
+    exercisesList.querySelectorAll('.exercise-card-start-btn').forEach(btn => {
         btn.addEventListener('click', () => {
+            const card = btn.closest('.exercise-card');
             document.dispatchEvent(
-                new CustomEvent(EVENTS.EXERCISE_OPEN, { detail: { id: btn.dataset.id } })
+                new CustomEvent(EVENTS.EXERCISE_OPEN, { detail: { id: card.dataset.id } })
             );
         });
     });
