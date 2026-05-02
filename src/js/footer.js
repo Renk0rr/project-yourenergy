@@ -4,7 +4,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 document.addEventListener('submit', async (e) => {
-  if (!e.target.matches('#subscribe-form')) return;
+  if (!e.target.matches('.subscribe-form')) return;
   e.preventDefault();
 
   const input = e.target.elements.email;
