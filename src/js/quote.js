@@ -28,16 +28,12 @@ async function loadQuote() {
 }
 
 function renderQuote({ quote, author }) {
-  const wrapper = document.querySelector('.quote-wrapper');
-  if (!wrapper) return;
-
-  wrapper.innerHTML = `
-    <svg class="quote-icon" width="24" height="24" aria-hidden="true">
-      <use href="./images/sprite.svg#icon-quote"></use>
-    </svg>
-    <blockquote class="quote-text">${quote}</blockquote>
-    <p class="quote-author">${author}</p>
-  `;
+  document.querySelectorAll('.quote-text').forEach(el => {
+    el.textContent = quote;
+  });
+  document.querySelectorAll('.quote-author').forEach(el => {
+    el.textContent = author;
+  });
 }
 
 loadQuote();
