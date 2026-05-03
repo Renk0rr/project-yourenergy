@@ -139,6 +139,8 @@
 
 .subscribe-form button:hover{
   background-color: var(--color-light-grey)3;
+  color: var(--white-color);
+
 }
 
 .bottom {
