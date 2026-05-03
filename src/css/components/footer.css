@@ -57,12 +57,14 @@
   transition: all 0.3s ease;
 }
 
-.socials-link:hover {
-  background-color: var(--white-color);
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--color-white);
 }
 
-.socials-link:hover .socials-icon {
-  fill: var(--black-color);
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--color-black);
 }
 
 .socials-icon {
@@ -93,8 +95,8 @@
 }
 
 .subscribe-form label {
-  font-size: 14px;
-  color: var(--color-black);
+  font-size: 18px;
+  color: var(--color-white);
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -130,15 +132,17 @@
   background-color: var(--color-white);
   color: var(--color-black);
   font-weight: bold;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 20px;
   cursor: pointer;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
 }
 
-.subscribe-form button:hover{
-  background-color: var(--color-light-grey)3;
+.subscribe-form button:hover,
+.subscribe-form button:focus {
+  background-color: var(--color-light-grey);
+  color: var(--color-black);
 }
 
 .bottom {
@@ -181,7 +185,7 @@
 
 @media screen and (min-width: 375px) {
   .subscribe-form input[type="email"] {
-    width: 335px;
+  width: 335px;
   }
   .subscribe-form button {
    width: 335px;
@@ -244,7 +248,7 @@
 }
 
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1280px){
   
   .footer-wrapper{
     gap: 158px;
@@ -257,8 +261,10 @@
   }
   
  .footer h2{
-    margin-bottom: 0;
-    width: 595px;  
+  margin-bottom: 0;
+  max-width: 595px;
+  width: 100%;
+  word-break: break-word;
   }
   
   .bottom{
