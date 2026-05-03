@@ -57,12 +57,14 @@
   transition: all 0.3s ease;
 }
 
-.socials-link:hover {
-  background-color: var(--white-color);
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--color-white);
 }
 
-.socials-link:hover .socials-icon {
-  fill: var(--black-color);
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--color-black);
 }
 
 .socials-icon {
@@ -137,10 +139,10 @@
   transition: background-color 0.3s ease;
 }
 
-.subscribe-form button:hover{
+.subscribe-form button:hover,
+.subscribe-form button:focus {
   background-color: var(--color-light-grey);
-  color: var(--white-color);
-
+  color: var(--color-white);
 }
 
 .bottom {
