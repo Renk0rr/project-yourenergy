@@ -266,7 +266,7 @@
 /* ══════════════════════════════════════
    DESKTOP (1440px+)
    ══════════════════════════════════════ */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .quote-wrapper {
     margin-top: 0;
     width: 444px;
