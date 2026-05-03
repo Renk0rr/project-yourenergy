@@ -9,6 +9,8 @@
   padding: 20px;
   color: #ffffff;
   margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .quote-card-top {
@@ -71,8 +73,8 @@
 }
 
 .quote-photo {
-  width: 335px;
-  height: 119px;
+  width: 100%;
+  height: 242px;
   object-fit: cover;
   display: block;
 }
@@ -89,6 +91,8 @@
   background: #ffffff;
   border-radius: 20px;
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .daily-norm-header {
@@ -164,14 +168,14 @@
 }
 
 .favorites-quote-wrap .daily-norm-card {
-  width: 335px;
-  height: 119px;
+  width: 100%;
+  height: auto;
   box-sizing: border-box;
 }
 
 .favorites-quote-wrap .quote-card {
+  width: 100%;
   height: auto;
-  width: 335px;
   box-sizing: border-box;
 }
 
