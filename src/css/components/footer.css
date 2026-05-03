@@ -142,7 +142,7 @@
 .subscribe-form button:hover,
 .subscribe-form button:focus {
   background-color: var(--color-light-grey);
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .bottom {
