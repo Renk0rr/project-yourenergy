@@ -54,6 +54,19 @@ button {
   width: 132px;
   height: 24px;
 }
+.menu-open-btn {
+  width: 44px;
+  height: 44px;
+  color: #242424;
+}
+
+.menu-open-btn svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+  stroke: currentColor;
+}
 
 @media screen and (max-width: 767px) {
   .nav {
@@ -140,6 +153,7 @@ button {
 .menu-open-btn svg {
   width: 100%;
   height: 100%;
+  
 }
 
 .socials-link {
@@ -242,6 +256,13 @@ button {
 .menu-close-btn svg {
   width: 44px;
   height: 44px;
+}
+.menu-close-btn svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+.menu-close-btn {
+  color: var(--color-white);
 }
 
 .mobile-nav {
