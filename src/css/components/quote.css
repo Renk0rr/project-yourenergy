@@ -1,7 +1,7 @@
 .favorites-quote-wrap .quote-photo {
   content: image-set(
-    url('../images/hero/women-sportswear-working-out-outdoors-(2)-1_mob.png') 1x,
-    url('../images/hero/women-sportswear-working-out-outdoors_(2)_1_tab@2x.png')
+    url('../images/hero/women-sportswear-working-out-outdoors-2-1_mob.png') 1x,
+    url('../images/hero/women-sportswear-working-out-outdoors_2_1_tab@2x.png')
       2x
   );
 }
@@ -306,9 +306,9 @@
 
   .favorites-quote-wrap .quote-photo {
     content: image-set(
-      url('../images/hero/women-sportswear-working-out-outdoors-(2)-1_tab.png')
+      url('../images/hero/women-sportswear-working-out-outdoors-2-1_tab.png')
         1x,
-      url('../images/hero/women-sportswear-working-out-outdoors_(2)_1_tab@2x.png')
+      url('../images/hero/women-sportswear-working-out-outdoors_2_1_tab@2x.png')
         2x
     );
   }
@@ -404,8 +404,8 @@
   @media screen and (min-width: 1280px) {
     .favorites-quote-wrap .quote-photo {
       content: image-set(
-        url('../images/hero/women-sportswear-working-out-outdoors-(2)-1.png') 1x,
-        url('../images/hero/women-sportswear-working-out-outdoors_(2)_1@2x.png')
+        url('../images/hero/women-sportswear-working-out-outdoors-2-1.png') 1x,
+        url('../images/hero/women-sportswear-working-out-outdoors_2_1@2x.png')
           2x
       );
     }
